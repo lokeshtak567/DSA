@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 void display(int *arr, int n)
+    // code for traversal
 {
     for ( int i = 0; i < n; i++)
     {
@@ -9,15 +10,16 @@ void display(int *arr, int n)
 }
 
 int indexinsertion(int *arr,int capacity,int size,int element,int index)
+    // code for insertion
 {
     if(size<capacity)
     {
-        for(int i=size+1; i>=index; i--)
+        for(int i=size-1; i>=index; i--)
         {
             arr[i+1]=arr[i];
         }
         arr[index] = element;
-        return size+=1;
+        return 1;
 
     }
 }
@@ -31,7 +33,11 @@ int main()
     int size = 4;
     int element = 67;
     int index = 1; 
-    indexinsertion(arr, capacity, size, element, index);
-    display(arr, size+1);
+    if (indexinsertion(arr, capacity, size, element, index)==1)
+    {
+        size+=1;
+        display(arr, size);
+    }
+
     return 0;
 }
