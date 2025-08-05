@@ -6,7 +6,6 @@ void display(int *arr, int n)
     {
         printf("%d ",arr[i]);
     }
-    
 }
 
 int main()
