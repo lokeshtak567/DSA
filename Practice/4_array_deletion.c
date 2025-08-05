@@ -14,6 +14,10 @@ void display(int *arr, int n)
 
 int indexdeletion(int *arr, int size, int index)
 {
+    if(index>size)
+    {
+        return -1;
+    }
     for(int i=index;i<size;i++)
     {
         arr[i]=arr[i+1];
