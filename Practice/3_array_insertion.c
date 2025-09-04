@@ -12,7 +12,7 @@ void display(int *arr, int n)
 int indexinsertion(int *arr,int capacity,int size,int element,int index)
     // code for insertion
 {
-    if(size<capacity)
+    if(size>capacity)
     {
         return -1;
     }
