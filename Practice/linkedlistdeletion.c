@@ -61,8 +61,10 @@ struct Node * deletebyvalue(struct Node * head, int value){
         p = p->Next;
         q = q->Next;
     }   
-    p->Next = q->Next;
-    free(q);
+    if(q->data == value){
+        p->Next = q->Next;
+        free(q);
+    }
     return head;
 }
 
